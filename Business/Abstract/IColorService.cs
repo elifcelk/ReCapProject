@@ -13,5 +13,8 @@ namespace Business.Abstract
         void Update(Color color);
 
         List<Color> GetAll();
+
+        Color GetById(int colorId);
+
     }
 }
