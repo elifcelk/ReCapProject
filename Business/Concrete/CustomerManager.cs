@@ -6,6 +6,8 @@ using Business.Constants;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Core.CrossCuttingConcerns.Validation;
+using Business.ValidationRules.FluentValidation;
 
 namespace Business.Concrete
 {
@@ -19,6 +21,7 @@ namespace Business.Concrete
 
         public IResult Add(Customer customer)
         {
+            ValidationTool.Validate(new CustomerValidator(), customer);
             _customerDal.Add(customer);
             return new SuccessResult(Messages.CustomerAdded);
         }
