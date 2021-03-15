@@ -1,4 +1,5 @@
 ﻿using Business.Concrete;
+using Core.Entities.Concrete;
 using DataAccess.Concrete.EntityFramework;
 using DataAccess.Concrete.InMemory;
 using Entities.Concrete;
@@ -26,14 +27,14 @@ namespace ConsoleUI
 
         }
 
-        private static void AddingTest(UserManager userManager, CustomerManager customerManager, RentalManager rentalManager)
-        {
-            userManager.Add(new User { UserId = 1, FirstName = "Elif", LastName = "Çelik", Email = "elifclk@gmail.com", Password = "123456" });
+        //private static void AddingTest(UserManager userManager, CustomerManager customerManager, RentalManager rentalManager)
+        //{
+        //    userManager.Add(new User { UserId = 1, FirstName = "Elif", LastName = "Çelik", Email = "elifclk@gmail.com", Password = "123456" });
 
-            customerManager.Add(new Customer { CustomerId = 1, UserId = 1, CompanyName = "Çelik" });
+        //    customerManager.Add(new Customer { CustomerId = 1, UserId = 1, CompanyName = "Çelik" });
 
-            rentalManager.Add(new Rental { RentalId = 1, CarId = 2, CustomerId = 1, RentDate = new DateTime(2021, 02, 20), ReturnDate = new DateTime(2021, 01, 10) });
-        }
+        //    rentalManager.Add(new Rental { RentalId = 1, CarId = 2, CustomerId = 1, RentDate = new DateTime(2021, 02, 20), ReturnDate = new DateTime(2021, 01, 10) });
+        //}
 
 
         private static void TEST2(CarManager carManager)
